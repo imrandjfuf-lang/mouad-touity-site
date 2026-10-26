@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELITE MOBILE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0d;color:#fff;font-family:Arial,sans-serif}
+header{padding:20px;background:#151515;border-bottom:1px solid #c9a65b}
+.logo{color:#d9b66d;font-size:23px;font-weight:bold}
+.hero{text-align:center;padding:55px 18px;background:linear-gradient(#302719,#0b0b0d)}
+h1{font-size:37px;line-height:1.5}
+.gold{color:#d9b66d}
+p{color:#bbb;line-height:1.8}
+button{background:#d9b66d;color:#111;border:0;padding:12px 20px;border-radius:7px;font-weight:bold}
+section{padding:25px 16px}
+h2{text-align:center}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{background:#18181b;border:1px solid #39332a;border-radius:10px;padding:12px;text-align:center}
+.phone{font-size:55px;background:#222;padding:15px;border-radius:8px}
+.price{color:#d9b66d;font-size:19px;font-weight:bold}
+a{color:#d9b66d}
+.contact{text-align:center;background:#151515;padding:30px 15px}
+footer{text-align:center;padding:20px;color:#888;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">ELITE MOBILE.</div>
+  <p>عالم الهواتف بين يديك</p>
+</header>
+
+<div class="hero">
+  <p class="gold">الجودة • الأناقة • الثقة</p>
+  <h1>اختار هاتفك<br><span class="gold">بأسلوب فاخر</span></h1>
+  <p>اكتشف مجموعة من هواتف iPhone وSamsung.</p>
+  <button onclick="document.getElementById('products').scrollIntoView()">اكتشف الهواتف</button>
+</div>
+
+<section id="products">
+<h2>أحدث الهواتف</h2>
+<div class="products">
+  <div class="card">
+    <div class="phone">📱</div>
+    <h3>iPhone 13</h3>
+    <p>128GB • أسود</p>
+    <div class="price">2800 درهم</div>
+    <button onclick="order('iPhone 13')">طلب الهاتف</button>
+  </div>
+  <div class="card">
+    <div class="phone">📱</div>
+    <h3>iPhone 13 Pro</h3>
+    <p>256GB • أخضر</p>
+    <div class="price">3950 درهم</div>
+    <button onclick="order('iPhone 13 Pro')">طلب الهاتف</button>
+  </div>
+  <div class="card">
+    <div class="phone">📱</div>
+    <h3>Samsung A55</h3>
+    <p>256GB</p>
+    <div class="price">2400 درهم</div>
+    <button onclick="order('Samsung A55')">طلب الهاتف</button>
+  </div>
+  <div class="card">
+    <div class="phone">📱</div>
+    <h3>Samsung S24 FE</h3>
+    <p>128GB</p>
+    <div class="price">4500 درهم</div>
+    <button onclick="order('Samsung S24 FE')">طلب الهاتف</button>
+  </div>
+</div>
+</section>
+
+<div class="contact">
+<h2>باغي شي هاتف؟</h2>
+<p>تواصل معنا عبر واتساب للاستفسار عن الثمن والتوفر.</p>
+<button onclick="order('استفسار عام')">تواصل معنا</button>
+</div>
+
+<footer>ELITE MOBILE © 2026</footer>
+
+<script>
+function order(product){
+  const phone="212600000000";
+  const msg=encodeURIComponent("السلام عليكم، بغيت معلومات على "+product);
+  window.open("https://wa.me/"+phone+"?text="+msg,"_blank");
+}
+</script>
+</body>
+</html>
